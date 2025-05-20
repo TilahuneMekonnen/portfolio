@@ -1,110 +1,91 @@
-/* Container to limit width and center content */
-.container {
-  width: 70%;
-  margin: 0 auto;
-  padding: 20px 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
-  background-color: #d7f0d3; /* light green background for container */
-  border-radius: 10px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  margin: auto;
+  background-color: #ffffff;
+  color: #333;
 }
 
-/* Header background red and styling */
+/* Header Styling */
 .resume-header {
   display: flex;
   align-items: center;
-  gap: 20px;
-  background-color: #d32f2f; /* dark red */
-  color: #fff;
-  padding: 20px 25px;
-  border-radius: 10px;
+  padding: 20px;
+  background-color: red;
+  color: white;
 }
 
-/* Profile image styling */
 .profile-img {
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #ffcdd2; /* light pinkish border */
+  border-radius: 8px;
+  margin-right: 20px;
+  border: 3px solid #ffffff;
 }
 
-/* Header text */
 .header-text h1 {
-  margin: 0 0 6px 0;
-  font-size: 2.8rem;
-  font-weight: 700;
+  margin: 0;
+  font-size: 2em;
 }
 
 .header-text p {
-  margin: 0;
-  font-size: 1.4rem;
-  font-style: italic;
-  color: #ffeaea;
+  margin: 5px 0 0;
 }
 
-/* Section styling */
+/* Section Styling */
 section {
-  background-color: #d7f0d3; /* light green */
-  padding: 20px 25px;
-  border-radius: 8px;
-  margin-top: 25px;
-  box-sizing: border-box;
+  background-color: #d9fdd3; /* light green */
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
-/* Section headings */
 h2 {
-  color: #2e7d32; /* dark green */
-  border-bottom: 2px solid #4caf50;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+  color: #2c3e50;
 }
 
-/* Gallery grid styling with 4 images per row */
+/* Gallery Styling */
 .gallery-grid {
-  border: 3px solid #4caf50; /* green border */
-  padding: 15px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  justify-content: center;
-  flex-wrap: nowrap;
-  border-radius: 12px;
-  background-color: #d7f0d3;
-  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
-/* Gallery images */
 .gallery-grid img {
-  width: 160px;
-  height: 220px; /* more height as requested */
+  width: 100%;
+  height: 250px;
   object-fit: cover;
+  border: 3px solid #8dc891;
   border-radius: 8px;
-  border: 2px solid #388e3c; /* dark green border */
-  transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
-  border-color: #2e7d32; /* darker green on hover */
-}
-
-/* List styling */
+/* Lists */
 .info-list {
-  list-style-type: none;
-  padding-left: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .info-list li {
   margin-bottom: 8px;
-  font-size: 1.1rem;
-  color: #333;
 }
 
-/* Paragraph styling inside sections */
-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #3f1267;
-  font-weight: bold;
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 }
